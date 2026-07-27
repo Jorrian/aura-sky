@@ -45,6 +45,8 @@ The private Aura Sky app repository remains the source of truth for product code
 - `support/index.html`: support page and data-source notes.
 - `privacy/index.html`: privacy policy.
 - `terms/index.html`: terms and disclaimer.
+- `robots.txt`: crawler policy and sitemap pointer.
+- `sitemap.xml`: canonical public page inventory.
 - `assets/aura-sky/`: public website images and styles.
 - `.nojekyll`: keeps GitHub Pages from applying Jekyll processing.
 

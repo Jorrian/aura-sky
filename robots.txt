@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jorrian.github.io/aura-sky/sitemap.xml
