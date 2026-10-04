@@ -248,6 +248,112 @@ figcaption {
   text-align: center;
 }
 
+.hero-carousel-stage {
+  height: clamp(360px, 42vw, 520px);
+  touch-action: pan-y pinch-zoom;
+}
+
+.hero-carousel-slide,
+.hero-carousel-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-carousel-slide[hidden],
+.hero-carousel-controls[hidden] {
+  display: none;
+}
+
+.hero-carousel-slide {
+  animation: hero-carousel-reveal 160ms ease-out;
+}
+
+.hero-carousel-image-link img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.hero-carousel-controls {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.hero-carousel-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hero-carousel-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.hero-carousel-controls button:hover {
+  background: var(--surface-soft);
+  color: var(--blue-deep);
+}
+
+.hero-carousel-controls button[aria-pressed="true"] {
+  border-color: rgba(12, 108, 242, 0.24);
+  background: var(--surface);
+  color: var(--blue-deep);
+}
+
+.hero-carousel-controls button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.hero-carousel-controls .hero-carousel-arrow {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+.hero-carousel-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.hero-carousel-caption,
+.hero-carousel-fallback {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.hero-carousel-caption {
+  min-height: 3em;
+}
+
+@keyframes hero-carousel-reveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .os27-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -622,6 +728,19 @@ h2 {
 }
 
 @media (max-width: 440px) {
+  .hero-carousel-platforms {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-carousel-controls button {
+    padding: 8px;
+  }
+
+  .hero-carousel-caption {
+    min-height: 4.5em;
+  }
+
   .nav-links {
     gap: 10px;
   }
@@ -636,6 +755,10 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero-carousel-slide {
+    animation: none;
+  }
+
   html {
     scroll-behavior: auto;
   }

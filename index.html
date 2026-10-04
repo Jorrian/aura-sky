@@ -20,7 +20,8 @@
     <meta name="twitter:image" content="https://jorrian.github.io/aura-sky/assets/aura-sky/dashboard-mac.jpg">
     <meta name="theme-color" content="#eef8ff">
     <link rel="icon" href="assets/aura-sky/app-icon.png?v=20260916">
-    <link rel="stylesheet" href="assets/aura-sky/site.css?v=20260916">
+    <link rel="stylesheet" href="assets/aura-sky/site.css?v=20261004-carousel">
+    <script src="assets/aura-sky/hero-carousel.js?v=20261004" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -52,12 +53,48 @@
             <a class="button secondary" href="#head-out">Explore Head Out</a>
           </div>
         </div>
-        <figure class="hero-media">
-          <a class="screenshot-link" href="assets/aura-sky/dashboard-mac.jpg" aria-label="View full-size Aura Sky Mac screenshot">
-            <img src="assets/aura-sky/dashboard-mac.jpg" alt="Aura Sky on Mac with current conditions, forecast information, and Mood Rhythm." width="1600" height="1000" decoding="async" fetchpriority="high">
-          </a>
-          <figcaption>Your day at a glance on Mac. Select to see the full screenshot.</figcaption>
-        </figure>
+        <div class="hero-media hero-carousel" role="region" aria-roledescription="carousel" aria-label="Aura Sky on your devices" data-hero-carousel>
+          <div class="hero-carousel-stage" data-carousel-stage>
+            <div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 4: iPhone" data-platform="iPhone">
+              <a class="hero-carousel-image-link" href="assets/aura-sky/hero-iphone.webp" aria-label="View full-size Aura Sky iPhone screenshot">
+                <img src="assets/aura-sky/hero-iphone.webp" alt="Aura Sky on iPhone showing San Francisco weather, forecast information, and Mood Rhythm." width="1320" height="2868" decoding="async" fetchpriority="high">
+              </a>
+            </div>
+            <div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: iPad" data-platform="iPad" hidden inert>
+              <a class="hero-carousel-image-link" href="assets/aura-sky/hero-ipad.webp" aria-label="View full-size Aura Sky iPad screenshot">
+                <img src="assets/aura-sky/hero-ipad.webp" alt="Aura Sky on iPad showing San Francisco weather, forecast information, and Mood Rhythm." width="2064" height="2752" decoding="async" loading="lazy">
+              </a>
+            </div>
+            <div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Mac" data-platform="Mac" hidden inert>
+              <a class="hero-carousel-image-link" href="assets/aura-sky/hero-mac.webp" aria-label="View full-size Aura Sky Mac screenshot">
+                <img src="assets/aura-sky/hero-mac.webp" alt="Aura Sky on Mac showing San Francisco weather, forecast information, and Mood Rhythm." width="2880" height="1800" decoding="async" loading="lazy">
+              </a>
+            </div>
+            <div class="hero-carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Apple Vision Pro" data-platform="Apple Vision Pro" hidden inert>
+              <a class="hero-carousel-image-link" href="assets/aura-sky/hero-vision-pro.webp" aria-label="View full-size Aura Sky Apple Vision Pro screenshot">
+                <img src="assets/aura-sky/hero-vision-pro.webp" alt="Aura Sky on Apple Vision Pro showing San Francisco weather, forecast information, and Mood Rhythm." width="3840" height="2160" decoding="async" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="hero-carousel-controls" data-carousel-controls hidden>
+            <button class="hero-carousel-arrow" type="button" aria-label="Previous platform" data-carousel-previous>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+            </button>
+            <div class="hero-carousel-platforms" role="group" aria-label="Choose a platform">
+              <button type="button" aria-pressed="true" data-carousel-select="0">iPhone</button>
+              <button type="button" aria-pressed="false" data-carousel-select="1">iPad</button>
+              <button type="button" aria-pressed="false" data-carousel-select="2">Mac</button>
+              <button type="button" aria-pressed="false" data-carousel-select="3">Apple Vision Pro</button>
+            </div>
+            <button class="hero-carousel-arrow" type="button" aria-label="Next platform" data-carousel-next>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+          <p class="hero-carousel-caption" aria-live="polite" aria-atomic="true" data-carousel-caption>Your day at a glance on iPhone. Select to see the full screenshot.</p>
+          <noscript>
+            <p class="hero-carousel-fallback">View full-size screenshots on <a href="assets/aura-sky/hero-ipad.webp">iPad</a>, <a href="assets/aura-sky/hero-mac.webp">Mac</a>, or <a href="assets/aura-sky/hero-vision-pro.webp">Apple Vision Pro</a>.</p>
+          </noscript>
+        </div>
       </section>
 
       <section class="section split" id="head-out" aria-labelledby="head-out-title">
