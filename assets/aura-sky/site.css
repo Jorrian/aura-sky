@@ -763,3 +763,23 @@ h2 {
     scroll-behavior: auto;
   }
 }
+
+/* Upcoming release status follows the available web viewport. */
+.duo-update {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: clamp(20px, 4vw, 48px);
+  margin-block: 32px;
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  overflow-wrap: anywhere;
+}
+.duo-update h2 { margin: 0; }
+.duo-update p { margin: 0 0 16px; }
+.duo-update .duo-status { color: var(--muted); font-size: 0.94rem; }
+.duo-update a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 720px) {
+  .duo-update { grid-template-columns: minmax(0, 1fr); }
+}
