@@ -764,22 +764,12 @@ h2 {
   }
 }
 
-/* Upcoming release status follows the available web viewport. */
-.duo-update {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-  gap: clamp(20px, 4vw, 48px);
-  margin-block: 32px;
-  padding: clamp(20px, 4vw, 32px);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--surface);
-  overflow-wrap: anywhere;
-}
-.duo-update h2 { margin: 0; }
-.duo-update p { margin: 0 0 16px; }
-.duo-update .duo-status { color: var(--muted); font-size: 0.94rem; }
-.duo-update a { display: inline-flex; align-items: center; min-height: 44px; }
+.duo-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.duo-gallery { display: grid; grid-template-columns: minmax(0, 2.06fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.duo-gallery figure { margin: 0; min-width: 0; }
 @media (max-width: 720px) {
-  .duo-update { grid-template-columns: minmax(0, 1fr); }
+  .duo-gallery { grid-template-columns: 1fr; gap: 32px; }
+  .duo-gallery figure:last-child { width: min(100%, 300px); justify-self: center; }
 }
+
+#duo-help { scroll-margin-top: 90px; }
